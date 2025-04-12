@@ -4,19 +4,6 @@
 ## Objetivo do Projeto
 ### Ilustrar o uso do Factory Method por meio de uma aplicação simples com diferentes tipos de janelas (WindowsDialog e HtmlDialog), mostrando como o cliente pode utilizar as classes criadas sem conhecer diretamente suas implementações concretas.
 
-## Estrutura do Projeto
-### O projeto está organizado da seguinte forma:
-
-```bash 
-
-PRJ_FactoryMethod/
-├── factory/
-│   ├── Dialog.java
-│   ├── HtmlDialog.java
-│   └── WindowsDialog.java
-├── Main.java
-```
-
 ### Dialog.java: Classe abstrata que define o método createButton() como Factory Method.
 ### HtmlDialog.java: Implementação concreta da classe Dialog, que cria botões HTML.
 ### WindowsDialog.java: Outra implementação concreta da classe Dialog, que cria botões de sistema nativo.
