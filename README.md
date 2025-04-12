@@ -1,11 +1,13 @@
-#Factory Method – Exemplo em Java
-###Este projeto demonstra a implementação do padrão de projeto Factory Method em Java, com base no exemplo proposto pelo site Refactoring Guru. O objetivo é apresentar de forma didática como o padrão pode ser aplicado para delegar a criação de objetos a subclasses, promovendo flexibilidade e reutilização de código.
+# Factory Method – Exemplo em Java
+### Este projeto demonstra a implementação do padrão de projeto Factory Method em Java, com base no exemplo proposto pelo site Refactoring Guru. O objetivo é apresentar de forma didática como o padrão pode ser aplicado para delegar a criação de objetos a subclasses, promovendo flexibilidade e reutilização de código.
 
-##Objetivo do Projeto
-###Ilustrar o uso do Factory Method por meio de uma aplicação simples com diferentes tipos de janelas (WindowsDialog e HtmlDialog), mostrando como o cliente pode utilizar as classes criadas sem conhecer diretamente suas implementações concretas.
+## Objetivo do Projeto
+### Ilustrar o uso do Factory Method por meio de uma aplicação simples com diferentes tipos de janelas (WindowsDialog e HtmlDialog), mostrando como o cliente pode utilizar as classes criadas sem conhecer diretamente suas implementações concretas.
 
-##Estrutura do Projeto
-###O projeto está organizado da seguinte forma:
+## Estrutura do Projeto
+### O projeto está organizado da seguinte forma:
+
+```bash 
 
 PRJ_FactoryMethod/
 ├── factory/
@@ -13,35 +15,35 @@ PRJ_FactoryMethod/
 │   ├── HtmlDialog.java
 │   └── WindowsDialog.java
 ├── Main.java
+```
 
+### Dialog.java: Classe abstrata que define o método createButton() como Factory Method.
+### HtmlDialog.java: Implementação concreta da classe Dialog, que cria botões HTML.
+### WindowsDialog.java: Outra implementação concreta da classe Dialog, que cria botões de sistema nativo.
+### Main.java: Classe principal que demonstra o uso do Factory Method, decidindo dinamicamente qual tipo de Dialog instanciar.
 
-###Dialog.java: Classe abstrata que define o método createButton() como Factory Method.
-###HtmlDialog.java: Implementação concreta da classe Dialog, que cria botões HTML.
-###WindowsDialog.java: Outra implementação concreta da classe Dialog, que cria botões de sistema nativo.
-###Main.java: Classe principal que demonstra o uso do Factory Method, decidindo dinamicamente qual tipo de Dialog instanciar.
+## Padrão de Projeto Utilizado
+### Factory Method é um padrão criacional que fornece uma interface para criar objetos em uma superclasse, permitindo que subclasses alterem o tipo de objetos que serão criados.
 
-##Padrão de Projeto Utilizado
-###Factory Method é um padrão criacional que fornece uma interface para criar objetos em uma superclasse, permitindo que subclasses alterem o tipo de objetos que serão criados.
+## Neste projeto:
 
-##Neste projeto:
+### -A classe Dialog contém um método fábrica (createButton()) abstrato.
 
-###-A classe Dialog contém um método fábrica (createButton()) abstrato.
+### -Subclasses (HtmlDialog e WindowsDialog) definem a lógica de criação dos objetos específicos.
 
-###-Subclasses (HtmlDialog e WindowsDialog) definem a lógica de criação dos objetos específicos.
+### -O código cliente (Main) utiliza as instâncias através da superclasse, mantendo baixo acoplamento.
 
-###-O código cliente (Main) utiliza as instâncias através da superclasse, mantendo baixo acoplamento.
+## Como Executar
 
-##Como Executar
+### Clone o repositório:
 
-###Clone o repositório:
-
-```bash
+```bash 
 git clone https://github.com/DevAnaBeatriz/PRJ_FactoryMethod.git
-```bash
+```
 
-###Importe o projeto em uma IDE Java de sua preferência (ex: IntelliJ, Eclipse, VS Code).
+### Importe o projeto em uma IDE Java de sua preferência (ex: IntelliJ, Eclipse, VS Code).
 
-###Execute a classe Main.java.
+### Execute a classe Main.java.
 
-##Referência
-###Refactoring Guru – Factory Method
+## Referência:
+### Refactoring Guru – Factory Method
